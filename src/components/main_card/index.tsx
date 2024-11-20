@@ -49,6 +49,7 @@ export function MainCard() {
             >
 
                 <motion.img
+                    variants={childVariants}
                     src="Minion.jpeg"
                     alt="Placeholder Image"
                     className="tw-w-full md:tw-w-1/2 tw-object-cover tw-rounded-md"
@@ -109,7 +110,7 @@ export function MainCard() {
                     className="tw-shadow-md hover:tw-shadow-xl dark:tw-shadow-gray-800 tw-transition-all tw-duration-300
                         tw-border-[1px] tw-p-3 tw-px-4 tw-border-black dark:tw-border-white tw-rounded-md"
                 >
-                    Check Pixa APIs
+                    Check AllMark APIs
                 </a>
             </motion.div>
         </motion.div>

@@ -1,91 +1,95 @@
-import Image from "next/image";
+import Image from 'next/image'
 
-export function Footer(){
-    return (<footer
-        className="tw-mt-auto tw-flex tw-flex-col tw-w-full tw-gap-4 tw-text-sm tw-pt-[5%] tw-pb-10 tw-px-[10%]
-                    tw-text-black dark:tw-text-white max-md:tw-flex-col"
-    >
-        <div className="tw-flex max-md:tw-flex-col max-md:tw-gap-6 tw-gap-3 tw-w-full tw-place-content-around">
-            <div
-                className="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-place-items-center tw-gap-6 max-md:tw-w-full"
-            >
-                <a href="#" className="tw-w-full tw-place-items-center tw-flex tw-flex-col tw-gap-6">
-                    <Image
-                        src="/logo/logo.png"
-                        alt="logo"
-                        width={120}
-                        height={120}
-                        className="tw-max-w-[120px] dark:tw-invert"
-                    />
-                    <div className="tw-max-w-[120px] tw-text-center tw-text-3xl tw-h-fit">
-                        SIMPLE AI
-                    </div>
-                </a>
-                <div className="tw-flex tw-gap-4 tw-text-lg">
-                    <a
-                        href="https://github.com/PaulleDemon/"
-                        aria-label="Github"
-                    >
-                        <i className="bi bi-github"></i>
+export function Footer() {
+    return (
+        <footer className="tw-mt-auto tw-flex tw-flex-col tw-w-full tw-gap-8 tw-text-sm tw-pt-12 tw-pb-10 tw-px-4 sm:tw-px-6 lg:tw-px-8 tw-text-black dark:tw-text-white tw-items-center">
+            <div className="tw-flex tw-flex-col lg:tw-flex-row tw-gap-8 tw-w-full tw-justify-between tw-max-w-[1120px]">
+                <div className="tw-flex tw-flex-col tw-items-center lg:tw-items-start tw-gap-6 tw-w-full lg:tw-w-auto">
+                    <a href="#" className="tw-flex tw-flex-col tw-items-center lg:tw-items-start tw-gap-4">
+                        <Image
+                            src="/logo/logo.png"
+                            alt="logo"
+                            width={96}
+                            height={96}
+                            className="tw-max-w-[96px] dark:tw-invert"
+                        />
+                        <div className="tw-text-center lg:tw-text-left tw-text-2xl lg:tw-text-3xl tw-font-bold">
+                            SIMPLE AI
+                        </div>
                     </a>
-                    <a
-                        href="https://twitter.com/pauls_freeman"
-                        aria-label="Twitter"
-                    >
-                        <i className="bi bi-twitter"></i>
-                    </a>
-
-                    <a
-                        href="https://www.linkedin.com/"
-                        aria-label="Linkedin"
-                    >
-                        <i className="bi bi-linkedin"></i>
-                    </a>
-                </div>
-
-            </div>
-
-            <div className="tw-flex max-md:tw-flex-col tw-flex-wrap tw-gap-6 tw-h-full tw-w-full tw-justify-around">
-                <div className="tw-flex tw-h-full tw-w-[200px] tw-flex-col tw-gap-4">
-                    <h2 className="tw-text-xl">Who We Are</h2>
-                    <div className="tw-flex tw-flex-col tw-gap-3">
-                        <a href="#" className="footer-link">Our Products</a>
-                        <a href="#" className="footer-link">About Us</a>
-                        <a href="#" className="footer-link">Careers</a>
-                        <a href="#" className="footer-link">Contact Us</a>
-                        <a href="#" className="footer-link">Pricing</a>
+                    <div className="tw-flex tw-gap-4 tw-text-lg">
+                        <a
+                            href="https://github.com/PaulleDemon/"
+                            aria-label="Github"
+                            className="hover:tw-text-gray-600 dark:hover:tw-text-gray-300 tw-transition-colors"
+                        >
+                            <i className="bi bi-github"></i>
+                        </a>
+                        <a
+                            href="https://twitter.com/pauls_freeman"
+                            aria-label="Twitter"
+                            className="hover:tw-text-gray-600 dark:hover:tw-text-gray-300 tw-transition-colors"
+                        >
+                            <i className="bi bi-twitter"></i>
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/"
+                            aria-label="Linkedin"
+                            className="hover:tw-text-gray-600 dark:hover:tw-text-gray-300 tw-transition-colors"
+                        >
+                            <i className="bi bi-linkedin"></i>
+                        </a>
                     </div>
                 </div>
 
-
-                <div className="tw-flex tw-h-full tw-w-[200px] tw-flex-col tw-gap-4">
-                    <h2 className="tw-text-xl">What We Do</h2>
-                    <div className="tw-flex tw-flex-col tw-gap-3">
-                        <a href="#" className="footer-link">M.I.N.O.N - Digital Worker</a>
-                        <a href="#" className="footer-link">Video Summarizing Tool(Coming Soon)</a>
-                        <a href="#" className="footer-link">AllMark</a>
-                        <a href="https://twitter.com/pauls_freeman" className="footer-link">LinkedIn</a>
-                        <a href="https://github.com/PaulleDemon" className="footer-link">Github</a>
+                <div className="tw-grid tw-grid-cols-1 sm:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-8 tw-w-full lg:tw-w-auto">
+                    <div className="tw-flex tw-flex-col tw-gap-4">
+                        <h2 className="tw-text-xl tw-font-semibold">Who We Are</h2>
+                        <div className="tw-flex tw-flex-col tw-gap-2">
+                            <FooterLink href="#">Our Products</FooterLink>
+                            <FooterLink href="#">About Us</FooterLink>
+                            <FooterLink href="#">Careers</FooterLink>
+                            <FooterLink href="#">Contact Us</FooterLink>
+                            <FooterLink href="#">Pricing</FooterLink>
+                        </div>
                     </div>
-                </div>
 
-                <div className="tw-flex tw-h-full tw-w-[200px] tw-flex-col tw-gap-4">
-                    <h2 className="tw-text-xl">Legal</h2>
-                    <div className="tw-flex tw-flex-col tw-gap-3">
-                        <a href="#" className="footer-link">Terms of service</a>
-                        <a href="#" className="footer-link">Privacy Policy</a>
-                        <a href="#" className="footer-link">DCMA - Content Takedown</a>
+                    <div className="tw-flex tw-flex-col tw-gap-4">
+                        <h2 className="tw-text-xl tw-font-semibold">What We Do</h2>
+                        <div className="tw-flex tw-flex-col tw-gap-2">
+                            <FooterLink href="#">M.I.N.O.N - Digital Worker</FooterLink>
+                            <FooterLink href="#">Video Summarizing Tool (Coming Soon)</FooterLink>
+                            <FooterLink href="#">AllMark</FooterLink>
+                            <FooterLink href="https://twitter.com/pauls_freeman">LinkedIn</FooterLink>
+                            <FooterLink href="https://github.com/PaulleDemon">Github</FooterLink>
+                        </div>
+                    </div>
+
+                    <div className="tw-flex tw-flex-col tw-gap-4">
+                        <h2 className="tw-text-xl tw-font-semibold">Legal</h2>
+                        <div className="tw-flex tw-flex-col tw-gap-2">
+                            <FooterLink href="#">Terms of service</FooterLink>
+                            <FooterLink href="#">Privacy Policy</FooterLink>
+                            <FooterLink href="#">DCMA - Content Takedown</FooterLink>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <hr className="tw-mt-8"/>
-        <div className="tw-mt-2 tw-flex tw-gap-2 tw-flex-col tw-text-gray-700 dark:tw-text-gray-300 tw-place-items-center
-                    tw-text-[12px] tw-w-full tw-text-center tw-place-content-around">
-            <span>Copyright &#169; 2024-2025</span>
-            <span>All trademarks and copyrights belong to their respective owners.</span>
-        </div>
+            <hr className="tw-border-gray-200 dark:tw-border-gray-700" />
 
-    </footer>)
+            <div className="tw-flex tw-flex-col tw-gap-2 tw-text-gray-600 dark:tw-text-gray-400 tw-items-center tw-text-xs sm:tw-text-sm">
+                <span>Copyright © 2024-2025</span>
+                <span className="tw-text-center">All trademarks and copyrights belong to their respective owners.</span>
+            </div>
+        </footer>
+    )
+}
+
+function FooterLink({ href, children }: { href: string; children: React.ReactNode }) {
+    return (
+        <a href={href} className="hover:tw-underline tw-text-gray-600 dark:tw-text-gray-300 hover:tw-text-gray-900 dark:hover:tw-text-white tw-transition-colors">
+            {children}
+        </a>
+    )
 }
