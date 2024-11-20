@@ -12,7 +12,7 @@ export default function Minion() {
             />
             <h1 className="tw-text-4xl tw-font-bold lg:tw-text-5xl tw-mt-8 tw-mb-8">M.I.N.I.O.N. – AI Based Digital
                 Worker</h1>
-            <div className="tw-text-lg tw-space-y-6 lg:tw-text-md lg:tw-space-y-8 mx-auto lg:tw-mx-96 tw-italic">
+            <div className="tw-text-lg tw-space-y-6 lg:tw-text-md lg:tw-space-y-8 mx-auto tw-max-w-[960px] tw-italic">
                 <p>Meet M.I.N.I.O.N., a revolutionary product that reshaped the business landscape by automating
                     operations with unmatched efficiency and precision. This AI-driven digital workforce has not only
                     proven its value across various sectors but has also set a new standard for what intelligent

@@ -11,7 +11,7 @@ export default function Minion() {
                 className="tw-mb-4 tw-w-full tw-max-w-[1000px] tw-h-auto"
             />
             <h1 className="tw-text-4xl tw-font-bold lg:tw-text-5xl tw-mt-8 tw-mb-8">Why Choose Simple AI?</h1>
-            <div className="tw-text-lg tw-space-y-6 lg:tw-text-md lg:tw-space-y-8 mx-auto lg:tw-mx-96 tw-italic">
+            <div className="tw-text-lg tw-space-y-6 lg:tw-text-md lg:tw-space-y-8 mx-auto tw-max-w-[960px] tw-italic">
                 <p>At Simple AI, we pride ourselves on being more than just a cutting-edge AI startup—we are a
                     community. Recognized as the best place to work for both seasoned professionals and fresh graduates,
                     we offer a unique culture that supports growth, innovation, and work-life balance.</p>
