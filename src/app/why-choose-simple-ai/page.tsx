@@ -4,7 +4,7 @@ export default function Minion() {
     return (
         <div className="tw-flex tw-flex-col tw-items-center tw-text-center tw-p-4 tw-mt-32 lg:tw-mt-32">
             <Image
-                src="/Handshake.jpg"
+                src="Handshake.jpg"
                 alt="Who We Are"
                 width={1400}
                 height={1400}
