@@ -92,6 +92,16 @@ html {
   /* font-family: "Ubuntu", sans-serif; */
 }
 
+body {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+section {
+  scroll-snap-align: start;
+}
+
 body.modal-open {
   overflow: hidden;
 }

@@ -47,24 +47,24 @@ export function Footer(){
 
             <div className="tw-flex max-md:tw-flex-col tw-flex-wrap tw-gap-6 tw-h-full tw-w-full tw-justify-around">
                 <div className="tw-flex tw-h-full tw-w-[200px] tw-flex-col tw-gap-4">
-                    <h2 className="tw-text-xl">Resources</h2>
+                    <h2 className="tw-text-xl">Who We Are</h2>
                     <div className="tw-flex tw-flex-col tw-gap-3">
-                        <a href="#" className="footer-link">Getting started</a>
-                        <a href="#" className="footer-link">API Docs</a>
-                        <a href="#" className="footer-link">API Endpoints</a>
-                        <a href="#" className="footer-link">Health status</a>
+                        <a href="#" className="footer-link">Our Products</a>
+                        <a href="#" className="footer-link">About Us</a>
+                        <a href="#" className="footer-link">Careers</a>
+                        <a href="#" className="footer-link">Contact Us</a>
                         <a href="#" className="footer-link">Pricing</a>
                     </div>
                 </div>
 
 
                 <div className="tw-flex tw-h-full tw-w-[200px] tw-flex-col tw-gap-4">
-                    <h2 className="tw-text-xl">Company</h2>
+                    <h2 className="tw-text-xl">What We Do</h2>
                     <div className="tw-flex tw-flex-col tw-gap-3">
-                        <a href="#" className="footer-link">Support channels</a>
-                        <a href="#" className="footer-link">Systems</a>
-                        <a href="#" className="footer-link">Blog</a>
-                        <a href="https://twitter.com/pauls_freeman" className="footer-link">Twitter</a>
+                        <a href="#" className="footer-link">M.I.N.O.N - Digital Worker</a>
+                        <a href="#" className="footer-link">Video Summarizing Tool(Coming Soon)</a>
+                        <a href="#" className="footer-link">AllMark</a>
+                        <a href="https://twitter.com/pauls_freeman" className="footer-link">LinkedIn</a>
                         <a href="https://github.com/PaulleDemon" className="footer-link">Github</a>
                     </div>
                 </div>
@@ -83,7 +83,7 @@ export function Footer(){
         <hr className="tw-mt-8"/>
         <div className="tw-mt-2 tw-flex tw-gap-2 tw-flex-col tw-text-gray-700 dark:tw-text-gray-300 tw-place-items-center
                     tw-text-[12px] tw-w-full tw-text-center tw-place-content-around">
-            <span>Copyright &#169; 2023-2025</span>
+            <span>Copyright &#169; 2024-2025</span>
             <span>All trademarks and copyrights belong to their respective owners.</span>
         </div>
 

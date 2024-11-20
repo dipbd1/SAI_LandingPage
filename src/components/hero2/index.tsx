@@ -1,23 +1,26 @@
 "use client";
-import {motion} from 'framer-motion';
+import {motion, useInView} from "framer-motion";
+import {useRef} from "react";
 
 const containerVariants = {
     hidden: {opacity: 0},
     visible: {
         opacity: 1,
         transition: {
-            staggerChildren: .2, // Delay between each child animation
+            delay: 0.5,
+            staggerChildren: 0.4, // Delay between each child animation
         },
     },
 };
 
-const revealUpVariants = {
+const childVariants = {
     hidden: {opacity: 0, y: 50},
     visible: {opacity: 1, y: 0, transition: {duration: 0.8}},
 };
 
-export function Hero() {
-
+export function Hero2() {
+    const ref = useRef(null);
+    const isInView = useInView(ref, {once: true});
     return (<section
         className="hero-section tw-relative tw-mt-20 tw-flex tw-min-h-[100vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-overflow-hidden max-lg:tw-mt-[100px]"
         id="hero-section"
@@ -66,49 +69,51 @@ export function Hero() {
 
             <motion.div
                 initial="hidden"
-                animate="visible"
+                ref={ref}
+                animate={isInView ? "visible" : "hidden"}
                 variants={containerVariants}
                 className="tw-flex tw-flex-col tw-min-h-[60vh] tw-place-content-center tw-items-center">
                 <motion.div
-                    variants={revealUpVariants}
+                    variants={childVariants}
                 >
                     <h2
                         className="reveal-up tw-text-center tw-text-7xl tw-font-semibold tw-uppercase tw-leading-[90px] max-lg:tw-text-4xl max-md:tw-leading-snug"
                     >
-                        <span> Where Simplicity Meets Genius </span>
-                        {/*<br/>*/}
-                        {/*<span className="tw-font-thin tw-font-serif"> in one place </span>*/}
+                        <span> Stay One Step Ahead </span>
+                        <br/>
+                        <span className="tw-font-thin tw-font-serif"> of DeepFakes </span>
                     </h2>
                 </motion.div>
 
                 <motion.div
                     className="reveal-up tw-mt-8 tw-max-w-[450px] tw-text-lg max-lg:tw-text-base tw-p-2 tw-text-center tw-text-gray-800 dark:tw-text-white max-lg:tw-max-w-full"
-                    variants={revealUpVariants}
+                    variants={childVariants}
                 >
-                    Discover AI tools designed for various industries, making advanced technology accessible to all.
+                    A trusted solution in an age where truth is increasingly challenged by digital deception. Built to
+                    protect integrity across industries, AllMark provides robust safeguards for the moments that matter.
                 </motion.div>
                 <motion.div
                     className="reveal-up tw-mt-10 max-md:tw-flex-col tw-flex tw-place-items-center tw-gap-4"
-                    variants={revealUpVariants}
+                    variants={childVariants}
                 >
-                    {/*<button*/}
-                    {/*    className="btn !tw-w-[170px] max-lg:!tw-w-[160px] !tw-rounded-xl !tw-py-4 max-lg:!tw-py-2 tw-flex tw-gap-2 tw-group !tw-bg-transparent !tw-text-black dark:!tw-text-white tw-transition-colors tw-duration-[0.3s] tw-border-[1px] tw-border-black dark:tw-border-white"*/}
-                    {/*>*/}
-                    {/*    <div*/}
-                    {/*        className="tw-relative tw-flex tw-place-items-center tw-place-content-center tw-w-6 tw-h-6">*/}
-                    {/*        <div*/}
-                    {/*            className="tw-absolute tw-inset-0 tw-top-0 tw-left-0 tw-scale-0 tw-duration-300 group-hover:tw-scale-100 tw-border-2 tw-border-gray-600 dark:tw-border-gray-200 tw-rounded-full tw-w-full tw-h-full"></div>*/}
-                    {/*        <span className="bi bi-play-circle-fill"></span>*/}
-                    {/*    </div>*/}
-                    {/*    <span>Watch video</span>*/}
-                    {/*</button>*/}
-                    <a
-                        className="btn tw-group max-lg:!tw-w-[160px] tw-flex tw-gap-2 tw-shadow-lg !tw-w-[170px] !tw-rounded-xl !tw-py-4 max-lg:!tw-py-2 tw-transition-transform tw-duration-[0.3s] hover:tw-scale-x-[1.03]"
-                        href="#"
+                    <button
+                        className="btn !tw-w-[170px] max-lg:!tw-w-[160px] !tw-rounded-xl !tw-py-4 max-lg:!tw-py-2 tw-flex tw-gap-2 tw-group !tw-bg-transparent !tw-text-black dark:!tw-text-white tw-transition-colors tw-duration-[0.3s] tw-border-[1px] tw-border-black dark:tw-border-white"
                     >
-                        <span>Get started</span>
-                        <i className="bi bi-arrow-right group-hover:tw-translate-x-1 tw-duration-300"></i>
-                    </a>
+                        {/*<div*/}
+                        {/*    className="tw-relative tw-flex tw-place-items-center tw-place-content-center tw-w-6 tw-h-6">*/}
+                        {/*    <div*/}
+                        {/*        className="tw-absolute tw-inset-0 tw-top-0 tw-left-0 tw-scale-0 tw-duration-300 group-hover:tw-scale-100 tw-border-2 tw-border-gray-600 dark:tw-border-gray-200 tw-rounded-full tw-w-full tw-h-full"></div>*/}
+                        {/*    <span className="bi bi-play-circle-fill"></span>*/}
+                        {/*</div>*/}
+                        <span>Take if for a Spin</span>
+                    </button>
+                    {/*<a*/}
+                    {/*    className="btn tw-group max-lg:!tw-w-[160px] tw-flex tw-gap-2 tw-shadow-lg !tw-w-[170px] !tw-rounded-xl !tw-py-4 max-lg:!tw-py-2 tw-transition-transform tw-duration-[0.3s] hover:tw-scale-x-[1.03]"*/}
+                    {/*    href="#"*/}
+                    {/*>*/}
+                    {/*    <span>Get started</span>*/}
+                    {/*    <i className="bi bi-arrow-right group-hover:tw-translate-x-1 tw-duration-300"></i>*/}
+                    {/*</a>*/}
                 </motion.div>
             </motion.div>
 

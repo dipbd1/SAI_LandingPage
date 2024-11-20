@@ -1,7 +1,6 @@
 "use client"
 import {motion, useInView} from "framer-motion";
 import {useRef} from "react";
-import Image from "next/image";
 
 const containerVariants = {
     hidden: {opacity: 0},
@@ -117,44 +116,50 @@ export function WideCard() {
                         <a href="#" className=" tw-relative tw-p-10 tw-transition-all tw-duration-300 tw-group/card  tw-gap-5 tw-flex
                             max-md:tw-flex-col tw-w-full tw-h-full  tw-bg-[#f6f7fb] dark:tw-bg-[#171717] tw-rounded-3xl
                             hover:tw-scale-[1.02]">
-                            <div
-                                className="tw-text-6xl tw-overflow-hidden tw-rounded-xl tw-w-full tw-h-full max-md:tw-h-[180px]">
-                                <Image
-                                    src="/images/home/ai-models.png"
-                                    alt="AI models"
-                                    width={500}
-                                    height={300}
-                                    className="tw-w-full tw-object-contain tw-h-full"
-                                />
-                            </div>
+                            {/*<div*/}
+                            {/*    className="tw-text-6xl tw-overflow-hidden tw-rounded-xl tw-w-full tw-h-full max-md:tw-h-[180px]">*/}
+                            {/*    <Image*/}
+                            {/*        src="/images/home/ai-models.png"*/}
+                            {/*        alt="AI models"*/}
+                            {/*        width={500}*/}
+                            {/*        height={300}*/}
+                            {/*        className="tw-w-full tw-object-contain tw-h-full"*/}
+                            {/*    />*/}
+                            {/*</div>*/}
                             <motion.div
                                 variants={containerVariants}
                                 initial="hidden"
                                 ref={ref}
                                 animate={isInView ? "visible" : "hidden"}
-                                className="tw-flex tw-flex-col tw-gap-4">
+                                className="tw-flex tw-flex-col tw-justify-center tw-gap-4">
                                 <motion.h2
                                     variants={childVariants}
-                                    className="tw-text-3xl max-md:tw-text-2xl tw-font-medium">Discover a Smarter
-                                    Tomorrow</motion.h2>
-                                <motion.p
-                                    variants={childVariants}
-                                    className="tw-leading-normal tw-text-gray-800 dark:tw-text-gray-200">
-                                    We’re here to listen, collaborate, and drive your vision forward. Whether it’s
-                                    through an email, a phone call, or a visit to our office, initiating a conversation
-                                    is the first step towards unparalleled creative success.
-                                </motion.p>
+                                    className="tw-text-3xl max-md:tw-text-2xl tw-font-medium">Ready to See AllMark in Action? Put Our Detection to the Test!</motion.h2>
+                                {/*<motion.p*/}
+                                {/*    variants={childVariants}*/}
+                                {/*    className="tw-leading-normal tw-text-gray-800 dark:tw-text-gray-200">*/}
+                                {/*    We’re here to listen, collaborate, and drive your vision forward. Whether it’s*/}
+                                {/*    through an email, a phone call, or a visit to our office, initiating a conversation*/}
+                                {/*    is the first step towards unparalleled creative success.*/}
+                                {/*</motion.p>*/}
                                 <motion.div
                                     variants={childVariants}
-                                    className="tw-flex tw-flex-row tw-justify-between tw-mt-auto">
-                                    <div className="tw-flex tw-items-center tw-gap-2 tw-mt-auto">
-                                        <span>Learn more</span>
-                                        <i className="bi bi-arrow-right tw-transform tw-transition-transform tw-duration-300 group-hover/card:tw-translate-x-2"></i>
-                                    </div>
-                                    <div className="tw-flex tw-items-center tw-gap-2 tw-mt-auto">
-                                        <span>Checkout Our Products</span>
-                                        <i className="bi bi-arrow-right tw-transform tw-transition-transform tw-duration-300 group-hover/card:tw-translate-x-2"></i>
-                                    </div>
+                                    className="tw-flex tw-flex-row tw-justify-center tw-mt-4">
+                                    {/*<div className="tw-flex tw-items-center tw-gap-2 tw-mt-auto">*/}
+                                    {/*    <span>Learn more</span>*/}
+                                    {/*    <i className="bi bi-arrow-right tw-transform tw-transition-transform tw-duration-300 group-hover/card:tw-translate-x-2"></i>*/}
+                                    {/*</div>*/}
+                                    {/*<div className="tw-flex tw-items-center tw-gap-2 tw-mt-auto">*/}
+                                    {/*    <span>Checkout Our Products</span>*/}
+                                    {/*    <i className="bi bi-arrow-right tw-transform tw-transition-transform tw-duration-300 group-hover/card:tw-translate-x-2"></i>*/}
+                                    {/*</div>*/}
+                                    <a
+                                        className="btn tw-group max-lg:!tw-w-[160px] tw-flex tw-gap-2 tw-shadow-lg !tw-w-[170px] !tw-rounded-xl !tw-py-4 max-lg:!tw-py-2 tw-transition-transform tw-duration-[0.3s] hover:tw-scale-x-[1.03]"
+                                        href="#"
+                                    >
+                                        <span>Click Here</span>
+                                        {/*<i className="bi bi-arrow-right group-hover:tw-translate-x-1 tw-duration-300"></i>*/}
+                                    </a>
                                 </motion.div>
 
                             </motion.div>
