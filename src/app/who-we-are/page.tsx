@@ -4,7 +4,7 @@ export default function WhoWeAre() {
     return (
         <div className="tw-flex tw-flex-col tw-items-center tw-text-center tw-p-4 tw-mt-32 lg:tw-mt-16">
             <Image
-                src="About-Us.jpeg"
+                src="/About-Us.jpeg"
                 alt="Who We Are"
                 width={800}
                 height={800}
