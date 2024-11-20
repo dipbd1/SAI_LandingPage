@@ -26,7 +26,7 @@ export function UploadFiles() {
             variants={containerVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            className="tw-flex tw-flex-col tw-items-center tw-justify-center tw-mb-48">
+            className="tw-flex tw-flex-col tw-items-center tw-justify-center tw-my-48">
             <motion.h1
                 variants={childVariants}
                 className="tw-text-4xl tw-font-bold tw-mb-4">Upload File for Analysis</motion.h1>
